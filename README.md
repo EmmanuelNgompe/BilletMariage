@@ -34,6 +34,7 @@ L’application affiche :
    git clone https://github.com/EmmanuelNgompe/BilletMariage.git
    cd BilletMariage
    npm install
+   npm install react-router-dom@latest
    npm start
    `
 
@@ -43,8 +44,8 @@ L’application sera disponible sur http://localhost:3000.
 
 ## 💡 Personnalisation
 
-- Remplace les images dans src/images/ par tes propres photos.
-- Modifie les textes dans App.js pour adapter l’histoire du couple.
+- Remplace les images dans src/images/ et images2 par tes propres photos.
+- Modifie les textes dans Billet.jsx pour adapter l’histoire du couple puis les images.
 - Ajuste les couleurs et polices dans App.css pour correspondre au thème du mariage.
 
 ---
