@@ -1,5 +1,5 @@
 import '../App.css';
-import coverImage from '../images2/couverture.png';
+import coverImage from '../images2/cover2.jpg';
 import couplePhoto1 from '../images2/profil2.jpg';
 import couplePhoto2 from '../images2/profil1.jpg';
 import storyImage1 from '../images2/histoire1.jpg';
@@ -32,7 +32,7 @@ import image20 from '../images2/image20.png';
 import confession from '../musique/confession.mp3';
 
 const timeline = [
-  { title: 'Cérémonie civile', detail: '31 juillet 2026 · 09:00', place: 'Mairie Douala IV' },
+  { title: 'Cérémonie civile', detail: '1er août 2026 · 09:00', place: 'Mairie Douala IV' },
   { title: 'Bénédiction nuptiale', detail: '1er août 2026 · 14:30', place: 'MPE Dikolo/Mpanjo · Bonaberi' },
   { title: 'Réception', detail: 'Soirée festive', place: 'À confirmer avec les familles' },
 ];
@@ -81,12 +81,12 @@ function Billet() {
           </div>
           <div className="couple-grid">
             <article className="person-card">
-              <img src={couplePhoto1} alt="Grace" />
+              <img src={couplePhoto1} alt="Grace"/>
               <h3>Grace</h3>
               <h4 style={{color:'rgba(25, 59, 162)'}}>La mariée</h4>
             </article>
             <article className="person-card">
-              <img src={couplePhoto2} alt="David" />
+              <img src={couplePhoto2} alt="David"/>
               <h3>David</h3>
               <h4 style={{color:'rgba(25, 59, 162)'}}>Le marié</h4>
             </article>
