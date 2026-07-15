@@ -1,37 +1,37 @@
 import '../App.css';
-import coverImage from '../images2/cover2.jpg';
+import coverImage from '../images2/cover2.webp';
 import coverImage2 from '../images/profilCover.webp';
-import coverImage3 from '../images/coupleCover.webp';
-import couplePhoto1 from '../images2/profil22.jpg';
-import couplePhoto2 from '../images2/profil12.jpg';
-import storyImage1 from '../images2/histoire1.jpg';
-import storyImage2 from '../images2/histoire2.png';
-import storyImage3 from '../images2/histoire3.jpg';
-import storyImage4 from '../images2/histoire4.jpg';
-import storyImage5 from '../images2/histoire5.jpg';
+import couplePhoto1 from '../images2/profil22.webp';
+import couplePhoto2 from '../images2/profil12.webp';
+import storyImage1 from '../images2/histoire1.webp';
+import storyImage2 from '../images2/histoire2.webp';
+import storyImage3 from '../images2/histoire3.webp';
+import storyImage4 from '../images2/histoire4.webp';
+import storyImage5 from '../images2/histoire5.webp';
 import Countdown from '../components/Countdown';
 import React, { useState } from 'react';
-import image1 from '../images2/image1.jpg';
-import image2 from '../images2/image2.jpg';
-import image3 from '../images2/image3.jpg';
-import image4 from '../images2/image4.jpg';
-import image5 from '../images2/image5.jpg';
-import image6 from '../images2/image6.jpg';
-import image7 from '../images2/image7.jpg';
-import image8 from '../images2/image8.jpg';
-import image9 from '../images2/image9.jpg';
-import image10 from '../images2/image10.jpg';
-import image11 from '../images2/image11.jpg';
-import image12 from '../images2/image12.jpg';
-import image13 from '../images2/image13.jpg';
-import image14 from '../images2/image14.jpg';
-import image15 from '../images2/image15.jpg';
-import image16 from '../images2/image16.jpg';
-import image17 from '../images2/image17.jpg';
-import image18 from '../images2/image18.png';
-import image19 from '../images2/image19.png';
-import image20 from '../images2/image20.png';
+import image1 from '../images2/image1.webp';
+import image2 from '../images2/image2.webp';
+import image3 from '../images2/image3.webp';
+import image4 from '../images2/image4.webp';
+import image5 from '../images2/image5.webp';
+import image6 from '../images2/image6.webp';
+import image7 from '../images2/image7.webp';
+import image8 from '../images2/image8.webp';
+import image9 from '../images2/image9.webp';
+import image10 from '../images2/image10.webp';
+import image11 from '../images2/image11.webp';
+import image12 from '../images2/image12.webp';
+import image13 from '../images2/image13.webp';
+import image14 from '../images2/image14.webp';
+import image15 from '../images2/image15.webp';
+import image16 from '../images2/image16.webp';
+import image17 from '../images2/image17.webp';
+import image18 from '../images2/image18.webp';
+import image19 from '../images2/image19.webp';
+import image20 from '../images2/image20.webp';
 import confession from '../musique/confession.mp3';
+import { useNavigate } from 'react-router-dom';
 
 const timeline = [
   { title: 'Cérémonie civile', detail: '1er août 2026 · 09:00', place: 'Mairie Douala IV' },
@@ -53,6 +53,14 @@ function Billet() {
     const body = encodeURIComponent(`Réponse: ${selectedResponse}\nNom: ${name}\nMessage: ${message}`);
     window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
   };
+
+  const navigate = useNavigate();
+
+    const handlenavigate = (path) => (event) => {
+        event.preventDefault();
+        // Handle login logic here
+        navigate(path);
+    };
 
   return (  
     <div className="App">
@@ -194,11 +202,18 @@ function Billet() {
             <img src={image19} alt="" />
             <img src={image20} alt="" />         
           </div>
+          <br/><p><button onClick={handlenavigate('/gallerie')} style={{ display: 'flex', position: 'relative', flexDirection: 'column', justifyContent: 'center', margin: '0 auto', 
+                    alignItems: 'center', gap: '5px', borderRadius: '26px', backgroundColor: '#193BA2', color: 'rgb(255, 255, 255)', fontWeight: 700, fontSize: '14px', padding: '14px 34px', cursor: 'pointer', boxShadow: 'rgba(75, 17, 65, 0.5) 0px 10px 28px', border: 'none', transition: 'all 0.3s ease 0s' }}>
+                    Voir plus de photos →
+                  </button>
+                </p>
           <p style={{ fontStyle: 'italic', color: 'rgba(65, 105, 225, 1)', textAlign: 'center', fontSize: '25px' }}>Celui qui trouve une femme trouve le bonheur; c'est une grace qu'il obtient de l'Eternel</p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', margin: '6px 0px' }}>
             <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
             <span style={{ fontFamily: 'tangerine', fontWeight: 500, fontSize: '17px', letterSpacing: '0.1em', textShadow: 'rgba(225, 185, 65, 1) 0px 2px 10px' }}>Proverbe18:22</span>
             <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
+
+            
           </div>
 
         </section>

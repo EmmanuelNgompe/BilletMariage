@@ -1,5 +1,5 @@
 import '../App.css';
-import coverImage from '../images2/couverture.png';
+import coverImage from '../images2/couverture.webp';
 import { useNavigate } from 'react-router-dom';
 
 function Acceuil () {
