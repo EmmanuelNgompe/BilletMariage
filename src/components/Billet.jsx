@@ -79,7 +79,7 @@ function Billet() {
           </div>
           <h1>David</h1>
           <p style={{fontSize: '1.5rem'}}>31 juillet & 1er août 2026</p>
-          <p style={{fontSize: '2rem'}}> <span style={{fontSize: '2rem'}}><u></u>Theme:</span> "La Grace de David"</p>
+          <p style={{fontSize: '2.3rem', color: 'rgb(230, 218, 182)'}}> <span style={{fontSize: '2rem'}}><u></u>Theme:</span><strong> "La Grace de David"</strong></p>
          
         </div>
       </div>
@@ -87,7 +87,7 @@ function Billet() {
       <main className="content">
         <section id="couple" className="section section-couple" >
           <div className="section-heading">
-            <p className="eyebrow">Les futurs mariés</p>
+            <p className="eyebrow" style={{color:'rgba(65, 105, 225, 1)'}}><u>Les futurs mariés</u></p>
             <h2>Deux chemins, une même lumière</h2>
           </div>
           <div className="couple-grid">
@@ -105,14 +105,14 @@ function Billet() {
         </section>
 
         <section className="section highlight-section">
-          <p className="eyebrow">Nous allons nous marier</p>
+          <p className="eyebrow" style={{color:'rgba(225, 185, 65, 1)'}}>Nous allons nous marier</p>
           <h2>1er août 2026</h2>
           <p>Une journée de joie, de grâce et de célébration à partager avec vous.</p>
           <Countdown targetDate="2026-08-01T00:00:00" />
         </section>
 
         <section className="section story-section">
-          <p className="eyebrow">Notre histoire</p>
+          <p className="eyebrow" style={{color:'rgba(65, 105, 225, 1)'}}><u>Notre histoire</u></p>
           <div className="story-copy">
             <h2>Un amour né de la simplicité</h2>
             <p className="story-text">
@@ -153,7 +153,7 @@ function Billet() {
 
         <section className="section timeline-section" style={{ backgroundImage: `url(${coverImage2})` }}>
           <div className="section-heading">
-            <p className="eyebrow">Le programme</p>
+            <p className="eyebrow" style={{color:'rgba(225, 185, 65, 1)'}}><u>Le programme</u></p>
             <h2 style={{color:'white'}}>Ce serait un réel honneur pour nous de vous compter parmis nos invités ces jours.</h2>
           </div>
           <div className="timeline-grid">
@@ -168,7 +168,7 @@ function Billet() {
         </section>
 
         <section className="section dresscode-section">
-          <p className="eyebrow">Dress code</p>
+          <p className="eyebrow" style={{color:'rgba(225, 185, 65, 1)'}}><u>Dress code</u></p>
           <h2 style={{color:'white'}}>Style médiéval-vintage</h2>
           <p style={{ fontSize: '1.3rem', color: 'white' }}>Les couleurs sont libres, mais l'élégance et la douceur du thème seront les bienvenues.</p>
           <div className="pill-list">
@@ -179,7 +179,7 @@ function Billet() {
         </section>
 
         <section className="section galerie-section">
-          <p className="eyebrow" style={{color:'rgba(42,68,162,1)'}}>Galerie</p>
+          <p className="eyebrow" style={{color:'rgba(42,68,162,1)'}}><u><strong>Galerie</strong></u></p>
           <div className="galerie-container">
             <img src={image1} alt="" />
             <img src={image2} alt="" />
@@ -220,7 +220,7 @@ function Billet() {
  
 
         <section className="section gift-section">
-          <p className="eyebrow">Un cadeau de cœur</p>
+          <p className="eyebrow" style={{color:'rgba(225, 185, 65, 1)'}}>Un cadeau de cœur</p>
           <h2 style={{ color: 'white' }}>Envie de participer à notre bonheur ? Vos cadeaux sont les bienvenus. Ne vous retenez pas. Soyez très large.</h2>
           <div className="gift-card">
             <p><u>Orange Money</u></p>
@@ -235,7 +235,7 @@ function Billet() {
 
         <section className="section form-section">
           <div className="section-heading">
-            <p className="eyebrow">Confirmez votre présence</p>
+            <p className="eyebrow" style={{color:'rgba(225, 185, 65, 1)'}}><u>Confirmez votre présence</u></p>
             <h2>Nous vous attendons</h2>
           </div>
           <form className="invite-form" onSubmit={handleFormSend}>

@@ -1,5 +1,5 @@
 import '../App.css';
-import coverImage from '../images2/couverture.webp';
+import coverImage from '../images2/image20.webp';
 import { useNavigate } from 'react-router-dom';
 
 function Acceuil () {
@@ -23,7 +23,7 @@ function Acceuil () {
                     <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
                   </div>
                   <h1>David</h1>
-                  <p style={{fontSize: '2rem'}}>31 juillet & 1er août 2026</p>
+                  <p style={{fontSize: '2rem', color: 'rgba(225, 185, 65, 1)'}}>31 juillet & 1er août 2026</p>
                   <button onClick={handlenavigate('/Billet')} style={{ display: 'flex', position: 'relative', flexDirection: 'column', justifyContent: 'center', margin: '0 auto', 
                     alignItems: 'center', gap: '5px', borderRadius: '26px', backgroundColor: '#193BA2', color: 'rgb(255, 255, 255)', fontWeight: 700, fontSize: '14px', padding: '14px 34px', cursor: 'pointer', boxShadow: 'rgba(75, 17, 65, 0.5) 0px 10px 28px', border: 'none', transition: 'all 0.3s ease 0s' }}>
                     <svg width="26" height="20" viewBox="0 0 26 20" fill="none" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
