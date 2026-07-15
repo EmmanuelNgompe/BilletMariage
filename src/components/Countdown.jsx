@@ -40,19 +40,19 @@ function Countdown({ targetDate = "2026-08-01T00:00:00" }) {
     <div className="countdown-box">
       <div>
         <strong>{format(timeLeft.days)}</strong>
-        <span>jours</span>
+        <span style={{ fontSize: '1.3rem' }}>jours</span>
       </div>
       <div>
         <strong>{format(timeLeft.hours)}</strong>
-        <span>heures</span>
+        <span style={{ fontSize: '1.3rem' }}>heures</span>
       </div>
       <div>
         <strong>{format(timeLeft.minutes)}</strong>
-        <span>minutes</span>
+        <span style={{ fontSize: '1.3rem' }}>minutes</span>
       </div>
       <div>
         <strong>{format(timeLeft.seconds)}</strong>
-        <span>secondes</span>
+        <span style={{ fontSize: '1.3rem' }}>secondes</span>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@
 
 body {
   font-family: tangerine, serif;
+  /* font-size: 2rem; */
   line-height: 1.6;
   color: #333;
 }
@@ -47,7 +48,7 @@ body {
 .bb2 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  font-size: 0.85rem;
+  font-size: 1rem;
   margin-bottom: 10px;
   font-weight: 600;
   opacity: 0.95;
@@ -108,7 +109,27 @@ body {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  background-image: linear-gradient(5deg, rgba(25, 59, 162, 0.7), rgba(225, 185, 66, 0.7)), url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZCUyMGltYWdlc3xlbnwwfHwwfHx8MA==&w=1000&q=80");
+  background-color: rgba(42, 68, 162, 0.3);
+}
+
+.section .section-couple {
+  display: flex;
+  gap: 20px;
+  background-image: url('./images/coupleCover.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center;
+  isolation: isolate;
+}
+
+.section-couple::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 59, 162, 0.4);
+  z-index: -1;
+
 }
 
 .section-heading {
@@ -119,8 +140,7 @@ body {
 .section .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  font-size: 0.8rem;
-  /* color: rgba(25, 59, 162, 0.7); */
+  font-size: 1rem;
   color: white;
   margin-bottom: 10px;
   display: block;
@@ -139,7 +159,6 @@ body {
 
 .section p {
   line-height: 1.8;
-  /* color: #555; */
   color: white;
   font-size: 1rem;
   font-family: 'Italianno', cursive;
@@ -184,7 +203,7 @@ body {
 
 /* Highlight Section */
 .highlight-section {
-  background: linear-gradient(135deg, #193BA2, #6b2d6b);
+  background: linear-gradient(135deg, #193BA2, #E1B941);
   color: white;
   text-align: center;
 }
@@ -199,6 +218,7 @@ body {
 
 .highlight-section p {
   color: rgba(255, 255, 255, 0.95);
+  font-size: 1.3rem;
 }
 
 /* Countdown */
@@ -238,12 +258,30 @@ body {
   align-items: center;
 }
 
+.story-copy {
+  background: rgba(25, 59, 162, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.storyImage:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
 .story-copy h2 {
   margin-bottom: 15px;
 }
 
 .story-copy p {
   margin-bottom: 15px;
+}
+
+.story-copy .story-text {
+  font-size: 1.4rem;
+  font-family: 'Italianno', cursive;
+  line-height: 1.8;
+  color: white;
 }
 
 .story-section img {
@@ -254,6 +292,23 @@ body {
 }
 
 /* Timeline Grid */
+.section.timeline-section {
+  color: white;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  isolation: isolate; /* évite que l'overlay passe sous le fond */
+}
+
+.timeline-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 59, 162, 0.4);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .timeline-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -263,7 +318,8 @@ body {
 
 .timeline-card {
   padding: 25px;
-  background: linear-gradient(135deg, #f9f9f9, #fff);
+  /* background: linear-gradient(135deg, rgba(225, 185, 65, 0.7), rgba(65, 105, 225, 0.7)); */
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 8px;
   border-left: 4px solid #193BA2;
   transition: transform 0.3s ease;
@@ -277,29 +333,41 @@ body {
 .timeline-card h3 {
   color: #193BA2;
   margin-bottom: 8px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .timeline-card p {
-  color: #666;
+  color: #193BA2;
   margin-bottom: 5px;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .timeline-card span {
   display: block;
-  color: #999;
-  font-size: 0.9rem;
+  color: #193BA2;
+  font-size: 1.2rem;
 }
 
 /* Dress Code */
 .dresscode-section {
   text-align: center;
-  background-image: linear-gradient(5deg, #193BA2, rgba(225,185,65,0.7)), url("./images/footer.jpg");
+  background-image:url('./images/footer.jpg');
   background-size: cover;
   background-position: center;
   color: white;
+  position: relative;
+  isolation: isolate;
 }
+
+.dresscode-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 59, 162, 0.4);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .dresscode-section .pill-list {
   display: flex;
   justify-content: center;
@@ -310,9 +378,9 @@ body {
 
 .pill-list span {
   padding: 8px 16px;
-  background: rgba(225, 255, 255, 0.5);
+  background: rgba(225, 255, 255, 1);
   border-radius: 20px;
-  color: #8b6f47;
+  color: #193BA2;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -320,23 +388,33 @@ body {
 /* Gift Section */
 .gift-section {
   text-align: center;
-  background-image: linear-gradient(5deg, #193BA2, rgba(225,185,65,0.7)), url("./images/tost.jpg");
+  background: url("./images/tost.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.gift-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 59, 162, 0.4);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .gift-card {
   display: inline-block;
-  background: rgba(255, 248, 240, 0.8);
+  background: rgba(255, 248, 240, 0.6);
   padding: 25px;
   border-radius: 8px;
-  border: 1px solid rgba(234, 215, 203, 1);
   margin-top: 20px;
 }
 
 .gift-card p {
-  font-size: 0.9rem;
-  color: #888;
+  font-size: 1.2rem;
+  color: black;
   margin-bottom: 5px;
 }
 
@@ -353,6 +431,17 @@ body {
   background-image: url("./images/Gift.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
+  isolation: isolate;
+}
+
+.form-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(25, 59, 162, 0.4);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .invite-form {
@@ -370,7 +459,7 @@ body {
   border: 1px solid #ddd;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1.3rem;
   font-family: inherit;
   resize: vertical;
 }

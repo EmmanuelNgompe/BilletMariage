@@ -1,7 +1,9 @@
 import '../App.css';
 import coverImage from '../images2/cover2.jpg';
-import couplePhoto1 from '../images2/profil2.jpg';
-import couplePhoto2 from '../images2/profil1.jpg';
+import coverImage2 from '../images/profilCover.webp';
+import coverImage3 from '../images/coupleCover.webp';
+import couplePhoto1 from '../images2/profil22.jpg';
+import couplePhoto2 from '../images2/profil12.jpg';
 import storyImage1 from '../images2/histoire1.jpg';
 import storyImage2 from '../images2/histoire2.png';
 import storyImage3 from '../images2/histoire3.jpg';
@@ -68,13 +70,14 @@ function Billet() {
             <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
           </div>
           <h1>David</h1>
-          <p>31 juillet & 1er août 2026</p>
+          <p style={{fontSize: '1.5rem'}}>31 juillet & 1er août 2026</p>
+          <p style={{fontSize: '2rem'}}> <span style={{fontSize: '2rem'}}><u></u>Theme:</span> "La Grace de David"</p>
          
         </div>
       </div>
 
       <main className="content">
-        <section id="couple" className="section">
+        <section id="couple" className="section section-couple" >
           <div className="section-heading">
             <p className="eyebrow">Les futurs mariés</p>
             <h2>Deux chemins, une même lumière</h2>
@@ -82,13 +85,13 @@ function Billet() {
           <div className="couple-grid">
             <article className="person-card">
               <img src={couplePhoto1} alt="Grace"/>
-              <h3>Grace</h3>
-              <h4 style={{color:'rgba(25, 59, 162)'}}>La mariée</h4>
+              <h3 style={{ fontSize: '2rem' }}>Grace</h3>
+              <h4 style={{color:'rgba(25, 59, 162)', fontSize: '1.5rem'}}>La mariée</h4>
             </article>
             <article className="person-card">
               <img src={couplePhoto2} alt="David"/>
-              <h3>David</h3>
-              <h4 style={{color:'rgba(25, 59, 162)'}}>Le marié</h4>
+              <h3 style={{ fontSize: '2rem' }}>David</h3>
+              <h4 style={{color:'rgba(25, 59, 162)', fontSize: '1.5rem'}}>Le marié</h4>
             </article>
           </div>
         </section>
@@ -101,49 +104,49 @@ function Billet() {
         </section>
 
         <section className="section story-section">
+          <p className="eyebrow">Notre histoire</p>
           <div className="story-copy">
-            <p className="eyebrow">Notre histoire</p>
             <h2>Un amour né de la simplicité</h2>
-            <p>
+            <p className="story-text">
               Entre rencontres inattendues et moments de grâce, notre histoire s'est construite pas à pas.
               Aujourd'hui, nous voulons la célébrer entourés de ceux qui ont compté dans notre chemin.
             </p>
           </div>
-          <img src={storyImage1} alt="Le couple dans un moment de partage" />
+          <img src={storyImage1} alt="Le couple dans un moment de partage" className='storyImage'/>
           <div className="story-copy">
             <h2>Les promesses d’un avenir partagé</h2>
-            <p>
+            <p className="story-text">
               Dans chaque sourire, nous avons trouvé la force de croire en demain. Nos projets se sont dessinés au fil des saisons, portés par la confiance et l’espérance.
             </p>
           </div>
-          <img src={storyImage2} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}}/>
+          <img src={storyImage2} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}} className='storyImage'/>
           <div className="story-copy">
             <h2>La complicité au quotidien</h2>
-            <p>
+            <p className="story-text">
               Entre gestes tendres et éclats de rire, nous avons appris à nous comprendre sans mots. Cette complicité est devenue le fil conducteur de notre vie commune.
             </p>
           </div>
-          <img src={storyImage3} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}}/>
+          <img src={storyImage3} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}} className='storyImage'/>
           <div className="story-copy">
             <h2>Les épreuves surmontées ensemble</h2>
-            <p>
+            <p className="story-text">
               Comme toute histoire, la nôtre a connu des défis. Mais main dans la main, nous avons transformé les obstacles en victoires, renforçant encore notre lien.
             </p>
           </div>
-          <img src={storyImage4} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}} />
+          <img src={storyImage4} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}} className='storyImage'/>
           <div className="story-copy">
             <h2>L’éclat d’un nouveau chapitre</h2>
-            <p>
+            <p className="story-text">
               Aujourd’hui, nous ouvrons une page lumineuse. Ce mariage est l’occasion de célébrer l’amour, la famille et l’amitié, entourés de ceux qui nous sont chers.
             </p>
           </div>
-          <img src={storyImage5} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}}/>
+          <img src={storyImage5} alt="Le couple dans un moment de partage" style={{display:'flex', objectPosition:'top center'}} className='storyImage'/>
         </section>
 
-        <section className="section">
+        <section className="section timeline-section" style={{ backgroundImage: `url(${coverImage2})` }}>
           <div className="section-heading">
             <p className="eyebrow">Le programme</p>
-            <h2>Les grands moments</h2>
+            <h2 style={{color:'white'}}>Ce serait un réel honneur pour nous de vous compter parmis nos invités ces jours.</h2>
           </div>
           <div className="timeline-grid">
             {timeline.map((item) => (
@@ -158,8 +161,8 @@ function Billet() {
 
         <section className="section dresscode-section">
           <p className="eyebrow">Dress code</p>
-          <h2>Style médiéval-vintage</h2>
-          <p style={{ fontStyle: 'italic', color: 'white' }}>Les couleurs sont libres, mais l'élégance et la douceur du thème seront les bienvenues.</p>
+          <h2 style={{color:'white'}}>Style médiéval-vintage</h2>
+          <p style={{ fontSize: '1.3rem', color: 'white' }}>Les couleurs sont libres, mais l'élégance et la douceur du thème seront les bienvenues.</p>
           <div className="pill-list">
             <span>Royal blue</span>
             <span>Blanc</span>
@@ -168,7 +171,7 @@ function Billet() {
         </section>
 
         <section className="section galerie-section">
-          <p className="eyebrow">Galerie</p>
+          <p className="eyebrow" style={{color:'rgba(42,68,162,1)'}}>Galerie</p>
           <div className="galerie-container">
             <img src={image1} alt="" />
             <img src={image2} alt="" />
@@ -191,10 +194,10 @@ function Billet() {
             <img src={image19} alt="" />
             <img src={image20} alt="" />         
           </div>
-          <p style={{ fontStyle: 'italic', color: 'rgba(225, 185, 65, 1)', textAlign: 'center', fontSize: '25px' }}>Celui qui trouve une femme trouve le bonheur; c'est une grace qu'il obtient de l'Eternel</p>
+          <p style={{ fontStyle: 'italic', color: 'rgba(65, 105, 225, 1)', textAlign: 'center', fontSize: '25px' }}>Celui qui trouve une femme trouve le bonheur; c'est une grace qu'il obtient de l'Eternel</p>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '14px', margin: '6px 0px' }}>
             <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
-            <span style={{ fontFamily: 'tangerine', fontWeight: 500, fontSize: '17px', letterSpacing: '0.1em', textShadow: 'rgba(225, 185, 65, 0.7) 0px 2px 10px' }}>Proverbe18:22</span>
+            <span style={{ fontFamily: 'tangerine', fontWeight: 500, fontSize: '17px', letterSpacing: '0.1em', textShadow: 'rgba(225, 185, 65, 1) 0px 2px 10px' }}>Proverbe18:22</span>
             <span style={{ width: '46px', height: '1px', background: 'rgba(255, 255, 255, 0.7)' }}></span>
           </div>
 
@@ -203,16 +206,15 @@ function Billet() {
 
         <section className="section gift-section">
           <p className="eyebrow">Un cadeau de cœur</p>
-          <h2>Votre présence est le plus beau présent</h2>
-          <p>Si vous souhaitez contribuer à notre bonheur, vos cadeaux seront les bienvenus.</p>
+          <h2 style={{ color: 'white' }}>Envie de participer à notre bonheur ? Vos cadeaux sont les bienvenus. Ne vous retenez pas. Soyez très large.</h2>
           <div className="gift-card">
-            <p>Orange Money</p>
+            <p><u>Orange Money</u></p>
             <strong>+237 695 537 795</strong>
             <p>Nom : David Djimafo</p>
             <span/><span/>
-            <p>MTN Mobile Money</p>
+            <p><u>MTN MoMo</u></p>
             <strong>+237 654 155 999</strong>
-            <p>Nom : Awam Ivan German</p>
+            <p>Nom : David Djimafo</p>
           </div>
         </section>
 
